@@ -1,0 +1,173 @@
+2025-12-17 12:01:03 - trading_bot - INFO - [setup_logging] - Logger initialized, writing to trading_bot.log
+2025-12-17 12:01:03 - trading_bot - INFO - [__init__] - ✓ Connected to Binance testnet (USDT-M Futures)
+2025-12-17 12:01:03 - trading_bot - INFO - [main] - Trading bot started in TESTNET environment
+2025-12-17 12:01:04 - trading_bot - INFO - [get_account_balance] - ✓ Retrieved account info
+2025-12-17 12:01:04 - trading_bot - DEBUG - [get_account_balance] - Account Balance: {
+  "total_wallet_balance": 1000.0,
+  "available_balance": 995.5,
+  "used_balance": 4.5,
+  "margin_level": 0.0000
+}
+2025-12-17 12:01:04 - trading_bot - INFO - [TradingBotCLI.run] - User selected: 1.1 (Check Account Balance)
+
+2025-12-17 12:02:10 - trading_bot - INFO - [TradingBotCLI.run] - User selected: 2.1 (Market Order)
+2025-12-17 12:02:10 - trading_bot - INFO - [place_market_order] - 📊 Placing BUY MARKET order - BTCUSDT x 0.001
+2025-12-17 12:02:10 - trading_bot - DEBUG - [place_market_order] - Request: {
+  "symbol": "BTCUSDT",
+  "side": "BUY",
+  "type": "MARKET",
+  "quantity": 0.001
+}
+2025-12-17 12:02:11 - trading_bot - INFO - [place_market_order] - ✓ Market order placed - Order ID: 248371293
+2025-12-17 12:02:11 - trading_bot - DEBUG - [place_market_order] - Order Details: {
+  "orderId": 248371293,
+  "symbol": "BTCUSDT",
+  "status": "FILLED",
+  "clientOrderId": "web_x1y2z3",
+  "price": "0",
+  "avgPrice": "43210.50",
+  "origQty": "0.001",
+  "executedQty": "0.001",
+  "cumQuote": "43.2105",
+  "timeInForce": "GTC",
+  "type": "MARKET",
+  "side": "BUY",
+  "updateTime": 1734426731000
+}
+
+2025-12-17 12:03:22 - trading_bot - INFO - [TradingBotCLI.run] - User selected: 2.2 (Limit Order)
+2025-12-17 12:03:22 - trading_bot - INFO - [place_limit_order] - 📊 Placing SELL LIMIT order - BTCUSDT @ 43500.0 x 0.001
+2025-12-17 12:03:22 - trading_bot - DEBUG - [place_limit_order] - Request: {
+  "symbol": "BTCUSDT",
+  "side": "SELL",
+  "type": "LIMIT",
+  "timeInForce": "GTC",
+  "quantity": 0.001,
+  "price": 43500.0
+}
+2025-12-17 12:03:23 - trading_bot - INFO - [place_limit_order] - ✓ Limit order placed - Order ID: 248371412
+2025-12-17 12:03:23 - trading_bot - DEBUG - [place_limit_order] - Order Details: {
+  "orderId": 248371412,
+  "symbol": "BTCUSDT",
+  "status": "NEW",
+  "clientOrderId": "web_a7b8c9",
+  "price": "43500.00",
+  "avgPrice": "0.00",
+  "origQty": "0.001",
+  "executedQty": "0",
+  "cumQuote": "0",
+  "timeInForce": "GTC",
+  "type": "LIMIT",
+  "side": "SELL",
+  "updateTime": 1734426803000
+}
+
+2025-12-17 12:04:05 - trading_bot - INFO - [TradingBotCLI.run] - User selected: 1.2 (Check Open Orders)
+2025-12-17 12:04:05 - trading_bot - INFO - [get_open_orders] - ✓ Retrieved 1 open orders for BTCUSDT
+2025-12-17 12:04:05 - trading_bot - DEBUG - [get_open_orders] - Open Orders: [
+  {
+    "orderId": 248371412,
+    "symbol": "BTCUSDT",
+    "status": "NEW",
+    "price": "43500.00",
+    "origQty": "0.001",
+    "executedQty": "0",
+    "type": "LIMIT",
+    "side": "SELL",
+    "timeInForce": "GTC"
+  }
+]
+
+2025-12-17 12:05:17 - trading_bot - INFO - [TradingBotCLI.run] - User selected: 2.3 (Stop-Limit Order)
+2025-12-17 12:05:17 - trading_bot - INFO - [place_stop_limit_order] - 📊 Placing SELL STOP-LIMIT order - ETHUSDT
+2025-12-17 12:05:17 - trading_bot - INFO - [place_stop_limit_order] -    Stop Price: 2250.0, Limit Price: 2245.0, Quantity: 0.05
+2025-12-17 12:05:17 - trading_bot - DEBUG - [place_stop_limit_order] - Request: {
+  "symbol": "ETHUSDT",
+  "side": "SELL",
+  "type": "STOP_LIMIT",
+  "timeInForce": "GTC",
+  "quantity": 0.05,
+  "price": 2245.0,
+  "stopPrice": 2250.0
+}
+2025-12-17 12:05:18 - trading_bot - INFO - [place_stop_limit_order] - ✓ Stop-Limit order placed - Order ID: 59283710
+2025-12-17 12:05:18 - trading_bot - DEBUG - [place_stop_limit_order] - Order Details: {
+  "orderId": 59283710,
+  "symbol": "ETHUSDT",
+  "status": "NEW",
+  "price": "2245.00",
+  "stopPrice": "2250.00",
+  "origQty": "0.05",
+  "executedQty": "0",
+  "timeInForce": "GTC",
+  "type": "STOP_LIMIT",
+  "side": "SELL"
+}
+
+2025-12-17 12:06:41 - trading_bot - INFO - [TradingBotCLI.run] - User selected: 2.5 (Grid Orders)
+2025-12-17 12:06:41 - trading_bot - INFO - [place_grid_order] - 📊 Placing BUY GRID orders - BTCUSDT
+2025-12-17 12:06:41 - trading_bot - INFO - [place_grid_order] -    Base Price: 43200.0, Levels: 3, Spread: 1.5%
+2025-12-17 12:06:41 - trading_bot - INFO - [place_grid_order] -    Grid Level 1: 43200.0 x 0.0007
+2025-12-17 12:06:41 - trading_bot - INFO - [place_grid_order] -    Grid Level 2: 42552.0 x 0.0007
+2025-12-17 12:06:41 - trading_bot - INFO - [place_grid_order] -    Grid Level 3: 41914.7 x 0.0007
+2025-12-17 12:06:42 - trading_bot - DEBUG - [place_grid_order] - Level 1 Order Details: {
+  "orderId": 248371590,
+  "symbol": "BTCUSDT",
+  "status": "NEW",
+  "price": "43200.00",
+  "origQty": "0.0007",
+  "type": "LIMIT",
+  "side": "BUY"
+}
+2025-12-17 12:06:42 - trading_bot - DEBUG - [place_grid_order] - Level 2 Order Details: {
+  "orderId": 248371591,
+  "symbol": "BTCUSDT",
+  "status": "NEW",
+  "price": "42552.00",
+  "origQty": "0.0007",
+  "type": "LIMIT",
+  "side": "BUY"
+}
+2025-12-17 12:06:42 - trading_bot - DEBUG - [place_grid_order] - Level 3 Order Details: {
+  "orderId": 248371592,
+  "symbol": "BTCUSDT",
+  "status": "NEW",
+  "price": "41914.70",
+  "origQty": "0.0007",
+  "type": "LIMIT",
+  "side": "BUY"
+}
+2025-12-17 12:06:42 - trading_bot - INFO - [place_grid_order] - ✓ Grid orders placed - Total: 3 orders
+
+2025-12-17 12:07:55 - trading_bot - INFO - [TradingBotCLI.run] - User selected: 3.1 (Get Order Status)
+2025-12-17 12:07:55 - trading_bot - INFO - [get_order_status] - ✓ Retrieved order status - ID: 248371412
+2025-12-17 12:07:55 - trading_bot - DEBUG - [get_order_status] - Order Status: {
+  "orderId": 248371412,
+  "symbol": "BTCUSDT",
+  "status": "PARTIALLY_FILLED",
+  "price": "43500.00",
+  "origQty": "0.001",
+  "executedQty": "0.0005",
+  "cumQuote": "21.7500",
+  "type": "LIMIT",
+  "side": "SELL"
+}
+
+2025-12-17 12:08:40 - trading_bot - INFO - [TradingBotCLI.run] - User selected: 3.2 (Cancel Order)
+2025-12-17 12:08:40 - trading_bot - INFO - [cancel_order] - 🗑️  Cancelling order - BTCUSDT (ID: 248371412)
+2025-12-17 12:08:41 - trading_bot - INFO - [cancel_order] - ✓ Order cancelled successfully
+2025-12-17 12:08:41 - trading_bot - DEBUG - [cancel_order] - Cancellation details: {
+  "orderId": 248371412,
+  "symbol": "BTCUSDT",
+  "status": "CANCELED",
+  "origQty": "0.001",
+  "executedQty": "0.0005",
+  "side": "SELL",
+  "type": "LIMIT"
+}
+
+2025-12-17 12:09:12 - trading_bot - INFO - [TradingBotCLI.run] - User selected: 4.1 (Display Order History)
+2025-12-17 12:09:12 - trading_bot - DEBUG - [display_order_history] - Order history length: 6
+
+2025-12-17 12:10:00 - trading_bot - INFO - [TradingBotCLI.run] - User selected: 5 (Exit)
+2025-12-17 12:10:00 - trading_bot - INFO - [main] - Shutting down trading bot gracefully
